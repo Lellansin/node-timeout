@@ -1,0 +1,28 @@
+{
+  "name": "node-timeout",
+  "version": "0.0.1",
+  "description": "timeout for node",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lellansin/node-timeout.git"
+  },
+  "keywords": [
+    "timeout"
+  ],
+  "author": "Lellansin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Lellansin/node-timeout/issues"
+  },
+  "homepage": "https://github.com/Lellansin/node-timeout",
+  "devDependencies": {
+    "async": "~0.9.0"
+  }
+}

@@ -3,7 +3,7 @@ node-timeout
 
 ```javascript
 var async = require('async');
-var timeout = require('../');
+var timeout = require('node-timeout');
 
 timeout.config({
     limit: 500,

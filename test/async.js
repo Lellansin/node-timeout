@@ -9,11 +9,11 @@ async.waterfall(
         function(cb) {
             console.time('cost');
             console.log('hello');
-            setTimeout(timeout(cb), 3000);
+            query(3000, timeout(cb));
         },
         function(cb) {
             console.log('hello');
-            setTimeout(timeout(cb), 1000);
+            query(1000, timeout(cb));
         }
     ],
     function(err) {
@@ -24,3 +24,8 @@ async.waterfall(
         console.timeEnd('cost');
     }
 );
+
+var query = function(time, cb) {
+    // do something
+    setTimeout(cb, time)
+};

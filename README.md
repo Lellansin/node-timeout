@@ -1,3 +1,7 @@
+node-timeout
+------------------
+
+```javascript
 var async = require('async');
 var timeout = require('../');
 
@@ -10,11 +14,11 @@ async.waterfall(
     [
 
         function(cb) {
-            console.log('hello 1');
+            console.log('hello');
             dosomething(3000, timeout(cb));
         },
         function(cb) {
-            console.log('hello 2');
+            console.log('hello');
             dosomething(1000, timeout(cb));
         }
     ],
@@ -29,3 +33,10 @@ async.waterfall(
 var dosomething = function(time, cb) {
     setTimeout(cb, time);
 };
+```
+
+output
+
+    hello 1
+    err: [Error: callback timeout!]
+    over

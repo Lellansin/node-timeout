@@ -1,13 +1,15 @@
 var async = require('async');
 var timeout = require('../');
 
-timeout.config({ limit: 500 });
+timeout.config({
+    limit: 500,
+    err: new Error('callback timeout!')
+});
 
 async.waterfall(
     [
 
         function(cb) {
-            console.time('cost');
             console.log('hello');
             query(3000, timeout(cb));
         },
@@ -21,11 +23,10 @@ async.waterfall(
             console.log('err:', err);
         }
         console.log('over');
-        console.timeEnd('cost');
     }
 );
 
+// do something
 var query = function(time, cb) {
-    // do something
     setTimeout(cb, time)
 };

@@ -1,10 +1,13 @@
 var async = require('async');
 var timeout = require('../');
 
+timeout.config({ limit: 500 });
+
 async.waterfall(
     [
 
         function(cb) {
+            console.time('cost');
             console.log('hello');
             setTimeout(timeout(cb), 3000);
         },
@@ -18,5 +21,6 @@ async.waterfall(
             console.log('err:', err);
         }
         console.log('over');
+        console.timeEnd('cost');
     }
 );

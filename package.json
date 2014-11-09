@@ -1,6 +1,6 @@
 {
   "name": "node-timeout",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "timeout for node",
   "main": "index.js",
   "directories": {

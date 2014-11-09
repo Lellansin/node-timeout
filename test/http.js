@@ -8,6 +8,7 @@ var limit = Timeout(1000, {
     }
 });
 
+// This is a test page which will spend 5 sec to load
 url = 'http://lellansin.com/test/timeout.php';
 
 var deal = function(res) {
@@ -19,8 +20,9 @@ var deal = function(res) {
         });
     } else {
         // exception status
-        console.error('http status', res.statusCode);
+        console.log('http status', res.statusCode);
     }
+    console.log('over');
 };
 
 http.get(url, limit(deal));

@@ -1,7 +1,6 @@
-node-timeout
-------------------
+# node-timeout
 
-# async module
+## async module
 ```javascript
 var async = require('async');
 var Timeout = require('node-timeout');
@@ -41,7 +40,7 @@ output
     err: [Error: callback timeout!]
     over
 
-# http module
+## http module
 
 ```javascript
 var http = require('http');

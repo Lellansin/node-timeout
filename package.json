@@ -1,6 +1,6 @@
 {
   "name": "node-timeout",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "timeout for node",
   "main": "index.js",
   "directories": {
@@ -24,5 +24,8 @@
   "homepage": "https://github.com/Lellansin/node-timeout",
   "devDependencies": {
     "async": "~0.9.0"
+  },
+  "dependencies": {
+    "options": "0.0.6"
   }
 }
